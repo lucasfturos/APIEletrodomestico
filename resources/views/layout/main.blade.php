@@ -40,7 +40,7 @@
     
     <div class="container">
       @if (session('menssage-success'))
-          <div class="alert alert-warning alert-dismissible fade show" id="alert-create" role="alert">
+          <div class="alert alert-success alert-dismissible fade show" id="alert-create" role="alert">
               {{ session('menssage-success') }}
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>

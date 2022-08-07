@@ -22,8 +22,23 @@
             </div>
             <div class="form-group mb-3">
                 <label for="title">Tensão do Eletrodoméstico</label>
-                <input type="text" class="form-control" id="tensao" name="tensao" 
-                value="{{ $eletrodomesticos->tensao }}" placeholder="Ex: 220V, 110V ou Bivolt">
+                <select class="form-select" id="tensao" name="tensao">
+                    @if ($eletrodomesticos->tensao == '220V')
+                    <option selected>{{$eletrodomesticos->tensao}}</option>
+                    <option value="110V">110V</option>
+                    <option value="Bivolt">Bivolt</option>
+                    @endif
+                    @if ($eletrodomesticos->tensao == '110V')
+                    <option selected>{{$eletrodomesticos->tensao}}</option>
+                    <option value="220V">220V</option>
+                    <option value="Bivolt">Bivolt</option>
+                    @endif
+                    @if ($eletrodomesticos->tensao == 'Bivolt')
+                    <option selected>{{$eletrodomesticos->tensao}}</option>
+                    <option value="220V">220V</option>
+                    <option value="110V">110V</option>
+                    @endif
+                  </select>
             </div>
             <div class="form-group mb-3">
                 <label for="title">Marca do Eletrodoméstico</label>

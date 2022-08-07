@@ -2,6 +2,15 @@
 @section('title','Cadastro')
 @section('content')
 
+@if ($errors->any())
+@foreach ($errors->all() as $error)
+<div class="alert alert-danger alert-dismissible fade show" id="alert-delete" role="alert">
+    {{ $error }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endforeach
+@endif
+
 <h1 class="text-center">Cadastro do Eletrodoméstico</h1>
 <div class="card">
     <div class="card-body">
@@ -18,7 +27,12 @@
             </div>
             <div class="form-group mb-3">
                 <label for="title">Tensão do Eletrodoméstico</label>
-                <input type="text" class="form-control" id="tensao" name="tensao" placeholder="Ex: 220V, 110V ou Bivolt">
+                <select class="form-select" id="tensao" name="tensao">
+                    <option selected>Selecione a tensão...</option>
+                    <option value="220V">220V</option>
+                    <option value="110V">110V</option>
+                    <option value="Bivolt">Bivolt</option>
+                  </select>
             </div>
             <div class="form-group mb-3">
                 <label for="title">Marca do Eletrodoméstico</label>

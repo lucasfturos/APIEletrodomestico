@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Eletrodomesticos;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;;
 
 class EletrodomesticoController extends Controller
 {
@@ -20,14 +22,26 @@ class EletrodomesticoController extends Controller
 
     public function store(Request $request)
     {
-        $eletrodomestico = new Eletrodomesticos;
-        $eletrodomestico->nome = $request->nome;
-        $eletrodomestico->descricao = $request->descricao;
-        $eletrodomestico->tensao = $request->tensao;
-        $eletrodomestico->marca = $request->marca;
-        $eletrodomestico->save();
-
-        return redirect('/')->with('menssage-success', 'Eletrodoméstico foi cadastrado com Sucesso');
+        $request->validate([
+            'nome' => 'required',
+            'descricao' => 'required',
+            'tensao' => 'required',
+            'marca' => 'required'
+        ], [
+            'nome.required' => 'Informe um nome para continuar',
+            'descricao.required' => 'Informe a descrição para continuar',
+            'tensao.required' => 'Selecione uma das tensões para continuar',
+            'marca.required' => 'Informe uma marca para continuar'
+        ]);
+        Eletrodomesticos::create(
+            [
+                'nome' => $request->nome,
+                'descricao' => $request->descricao,
+                'tensao' => $request->tensao,
+                'marca' => $request->marca
+            ]
+        );
+        return Redirect::route('home')->with('menssage-success', 'Eletrodoméstico foi cadastrado com Sucesso');
     }
 
     public function edit($id)
