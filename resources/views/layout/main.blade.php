@@ -25,7 +25,7 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link" href="/">Listagem e Exclusão</a>
+                      <a class="nav-link" href="/">Inicio</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="/create">Cadastro</a>
@@ -37,12 +37,35 @@
             </div>
         </nav>
     </header>
+    
     <div class="container">
-        @yield('content')
+      @if (session('menssage-success'))
+          <div class="alert alert-warning alert-dismissible fade show" id="alert-create" role="alert">
+              {{ session('menssage-success') }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      @endif
+      @if (session('menssage-update'))
+          <div class="alert alert-warning alert-dismissible fade show" id="alert-delete" role="alert">
+              {{ session('menssage-update') }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      @endif
+      @if (session('menssage-delete'))
+          <div class="alert alert-warning alert-dismissible fade show" id="alert-delete" role="alert">
+              {{ session('menssage-delete') }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      @endif
+
+      @yield('content')
+      
     </div>
     <footer>
     </footer>
-    <!-- JavaScript Bundle with Popper -->
+    {{-- JavaScript da Aplicação --}}
+    <script src="/js/script.js"></script>
+    {{-- JavaScript Bundle with Popper --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     {{-- Ionicons / https://ionic.io/ionicons/usage --}}

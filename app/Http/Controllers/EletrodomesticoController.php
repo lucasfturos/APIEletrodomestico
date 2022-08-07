@@ -15,7 +15,7 @@ class EletrodomesticoController extends Controller
     public function create()
     {
         $eletrodomestico = Eletrodomesticos::all();
-        return view(('eletrodomestico.create_update'), ['eletrodomesticos' => $eletrodomestico]);
+        return view(('eletrodomestico.create'), ['eletrodomesticos' => $eletrodomestico]);
     }
 
     public function store(Request $request)
@@ -27,13 +27,24 @@ class EletrodomesticoController extends Controller
         $eletrodomestico->marca = $request->marca;
         $eletrodomestico->save();
 
-        return redirect('/');
+        return redirect('/')->with('menssage-success', 'Eletrodoméstico foi cadastrado com Sucesso');
     }
 
-    public function update()
+    public function edit($id)
     {
+        $eletrodomestico = Eletrodomesticos::findOrFail($id);
+        return view(('eletrodomestico.edit'), ['eletrodomesticos' => $eletrodomestico]);
     }
-    public function destroy()
+
+    public function update(Request $request)
     {
+        Eletrodomesticos::findOrFail($request->id)->update($request->all());
+        return redirect('/')->with('menssage-update', 'Eletrodoméstico foi Atualizado com Sucesso');
+    }
+
+    public function destroy($id)
+    {
+        Eletrodomesticos::findOrFail($id)->delete();
+        return redirect('/')->with('menssage-delete', 'Eletrodoméstico foi Excluído com Sucesso');
     }
 }

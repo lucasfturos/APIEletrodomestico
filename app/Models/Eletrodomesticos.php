@@ -10,5 +10,6 @@ class Eletrodomesticos extends Model
     use HasFactory;
     protected $table = 'table_eletrodomestico';
     protected $primaryKey = 'id';
+    protected $guarded = [];
     public $timestamps = false;
 }

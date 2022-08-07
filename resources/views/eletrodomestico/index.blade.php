@@ -2,7 +2,7 @@
 @section('title','Eletrodomestico')
 @section('content')
 
-<h1>Listagem e Exclusão dos Eletrodomésticos</h1>
+<h1 class="text-center">Listagem, Edição e Exclusão dos Eletrodomésticos</h1>
 <div class="card">
     <div class="card-body">
         <table class="table table-hover">
@@ -13,7 +13,7 @@
                 <th scope="col">Descrição</th>
                 <th scope="col">Tensão</th>
                 <th scope="col">Marca</th>
-                <th scope="col">Ação</th>
+                <th scope="col">Editar/Excluir</th>
               </tr>
             </thead>
             @if (count($eletrodomesticos) > 0)
@@ -27,8 +27,13 @@
                         <td>{{ $item->marca }}</td>
                         <td>
                             <div class="d-flex align-items-center">
-                                <button class="btn btn-success"><ion-icon name="create-outline"></ion-icon></button>
-                                <button class="btn btn-danger"><ion-icon name="close-outline"></ion-icon></button>
+                                <a href="/edit/{{ $item->id }}"><button class="btn btn-success"><ion-icon name="create-outline"></ion-icon></button></a>
+                                <form action="/{{ $item->id }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger" type="submit">
+                                        <ion-icon name="close-outline"></ion-icon></button>
+                                </form>
                             </div>
                         </td>
                     </tr>

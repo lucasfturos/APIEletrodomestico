@@ -1,12 +1,8 @@
 @extends('layout.main')
-@section('title','Eletrodomestico')
+@section('title','Cadastro')
 @section('content')
 
-{{-- @if () --}}
 <h1 class="text-center">Cadastro do Eletrodoméstico</h1>
-{{-- @else
-<h1 class="text-center">Editação do Eletrodoméstico</h1>
-@endif --}}
 <div class="card">
     <div class="card-body">
         <form action="/" method="POST">
