@@ -29,8 +29,8 @@ git clone https://github.com/lucasfturos/APIEletrodomestico.git
 ```
 
 Instale as dependência utilizando o Composer dentro do pasta do projeto
-```
 
+```
 cd APIEletrodomestico
 php composer.phar install
 ```
