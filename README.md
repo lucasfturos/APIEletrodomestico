@@ -39,11 +39,15 @@ Clone o repositório em uma pasta
 git clone https://github.com/lucasfturos/APIEletrodomestico.git
 ```
 
-Instale as dependência utilizando o Composer dentro do pasta do projeto
+Instale as dependências utilizando o Composer dentro do pasta do projeto
 ```
-
 cd APIEletrodomestico
 php composer.phar install
+```
+
+Instale as dependências do Vue js dentro da pasta do projeto
+```
+npm install
 ```
 
 Faça uma cópia do arquivo de configuração  
@@ -77,5 +81,6 @@ php artisan migrate --seed
 Inicie a aplicação com o comando 
 ```
 php artisan serve
+npm run watch-poll
 ```
 
