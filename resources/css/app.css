@@ -1,0 +1,64 @@
+/* Corpo da página */
+body {
+    font-family: 'Nunito', sans-serif, Arial, Helvetica;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+/* Alerts */
+#alerta-danger {
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 18px;
+    border-color: #f5c2c7;
+    color: #842029;
+    background-color: #f8d7da;
+}
+
+.alert {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.container-fluid,
+.container {
+    padding: 0;
+}
+
+/* Link */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Menu */
+
+.navbar a:hover {
+    color: white;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+select {
+    display: block
+}
