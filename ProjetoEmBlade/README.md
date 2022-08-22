@@ -1,31 +1,9 @@
-## Back-end
-
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## Front-end
-
-<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo"></a></p>
-
-<p align="center">
-  <a href="https://circleci.com/gh/vuejs/vue/tree/dev"><img src="https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg?sanitize=true" alt="Build Status"></a>
-  <a href="https://codecov.io/github/vuejs/vue?branch=dev"><img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg?sanitize=true" alt="Coverage Status"></a>
-  <a href="https://npmcharts.com/compare/vue?minimal=true"><img src="https://img.shields.io/npm/dm/vue.svg?sanitize=true" alt="Downloads"></a>
-  <a href="https://www.npmjs.com/package/vue"><img src="https://img.shields.io/npm/v/vue.svg?sanitize=true" alt="Version"></a>
-  <a href="https://www.npmjs.com/package/vue"><img src="https://img.shields.io/npm/l/vue.svg?sanitize=true" alt="License"></a>
-  <a href="https://chat.vuejs.org/"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg?sanitize=true" alt="Chat"></a>
-</p>
 
 ## API Eletrodomésticos
 
 <p>
-    Repositório criado com o objetivo de apresentar uma API simples utilizando o Laravel para o back-end e o Vue para o front-end. A aplicação é um sistema de cadastro de eletrodomésticos contendo recursos para criação, listagem, edição e remoção de registros.
+    Repositório criado com o objetivo de apresentar uma API simples utilizando o Laravel para o back-end e o Blade template para o front-end. A aplicação é um sistema de cadastro de eletrodomésticos contendo recursos para criação, listagem, edição e remoção de registros.
 </p>
 
 ## Instalação e Configuração
@@ -40,8 +18,8 @@ git clone https://github.com/lucasfturos/APIEletrodomestico.git
 ```
 
 Instale as dependência utilizando o Composer dentro do pasta do projeto
-```
 
+```
 cd APIEletrodomestico
 php composer.phar install
 ```
@@ -74,8 +52,11 @@ php artisan migrate --seed
 
 ## Iniciando a API
 
-Inicie a aplicação com o comando 
+Inicie a aplicação com os comandos: 
 ```
 php artisan serve
 ```
 
+## Screnshot
+
+Caso queira conhecer o projeto, a pasta Screnshot tem fotos das telas e algumas ações
