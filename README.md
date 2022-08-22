@@ -22,6 +22,8 @@
   <a href="https://chat.vuejs.org/"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg?sanitize=true" alt="Chat"></a>
 </p>
 
+<p align="center"><a href="https://inertiajs.com/" target="_blank" rel="noopener noreferrer"><img width="650px" src="https://raw.githubusercontent.com/inertiajs/inertia/master/.github/LOGO.png" alt="Inertia logo"></a></p>
+
 ## API Eletrodomésticos
 
 <p>
