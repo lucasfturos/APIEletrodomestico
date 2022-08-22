@@ -1,20 +1,9 @@
-## Front-end
-
-<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo"></a></p>
-
-
-## Back-end
-
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-
-<p align="center"><a href="https://inertiajs.com/"><img src="https://inertiajs.com/previews/home.png" width="500" height="250"></img></a></p>
-
 
 ## API Eletrodomésticos
 
 <p>
-    Repositório criado com o objetivo de apresentar uma API simples utilizando o Laravel para o back-end e o Vue para o front-end. A aplicação é um sistema de cadastro de eletrodomésticos contendo recursos para criação, listagem, edição e remoção de registros.
+    Repositório criado com o objetivo de apresentar uma API simples utilizando o Laravel para o back-end e o Blade template para o front-end. A aplicação é um sistema de cadastro de eletrodomésticos contendo recursos para criação, listagem, edição e remoção de registros.
 </p>
 
 ## Instalação e Configuração
@@ -61,26 +50,13 @@ Faça a migração das bases de dados
 php artisan migrate --seed
 ```
 
-Instale as dependências do Inertia js e Vue js com os seguintes comandos
-
-```
-npm install && npm run dev
-```
-
 ## Iniciando a API
 
 Inicie a aplicação com os comandos: 
 ```
 php artisan serve
 ```
-```
-npm run watch
-```
 
 ## Screnshot
 
 Caso queira conhecer o projeto, a pasta Screnshot tem fotos das telas e algumas ações
-
-## Problemas
-
-O projeto esta funcional, porém a versão no repositório é feita pela template Blade, logo, será implementado o Inertia e o Vue
