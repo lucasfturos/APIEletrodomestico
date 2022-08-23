@@ -86,8 +86,13 @@ php artisan serve
 npm run watch-poll
 ```
 
+## Problemas
+
+Por enquanto o projeto não está funcionando a parte de edição/atualização dos dados,
+mas logo será implementado
+
 ## Projeto em Blade
 
 Na pasta ProjetoEmBlade temos a mesma API só que usando o template Blade 
 ao invés do Vue, caso tenha interesse é só acessar e fazer a instalação 
-seguindo a documentação do REAME da pasta.
+seguindo a documentação do README da pasta.
