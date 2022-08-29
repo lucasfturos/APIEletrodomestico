@@ -6,7 +6,7 @@
             <h1 class="text-center">Atualização do Eletrodoméstico</h1>
             <div class="card">
                 <div class="card-body">
-                    <form @submit.prevent="update">
+                    <form @submit.prevent="updateEletrodomestico">
                         <div class="form-group mb-3">
                             <label for="title">Nome do Eletrodoméstico</label>
                             <input type="text" class="form-control" id="nome" name="nome" v-model="form.nome"
@@ -31,7 +31,7 @@
                         <div class="form-group mb-3">
                             <label for="title">Tensão do Eletrodoméstico</label>
                             <select class="form-select" id="tensao" name="tensao" v-model="form.tensao">
-                                <option selected>Selecione a tensão...</option>
+                                <option :value="null" disabled>Selecione a tensão...</option>
                                 <option value="220V">220V</option>
                                 <option value="110V">110V</option>
                                 <option value="Bivolt">Bivolt</option>
@@ -66,26 +66,30 @@
 <script>
 import Layout from './Menu.vue'
 import { Head, useForm } from "@inertiajs/inertia-vue3";
-import { Inertia } from '@inertiajs/inertia'
-import { reactive } from 'vue'
+import route from '../../../vendor/tightenco/ziggy/src/js';
 
 export default {
     components: {
         Layout,
         Head
     },
-    setup(props) {
+    props: {
+
+        errors: Object
+    },
+    setup() {
         const form = useForm({
-            nome: props.nome,
-            descricao: props.descricao,
-            tensao: props.tensao,
-            marca: props.marca,
+            nome: null,
+            descricao: null,
+            tensao: null,
+            marca: null,
         })
         return { form }
     },
-    props: {
-        eletrodomestico: Object,
-        errors: Object
+    methods: {
+        updateEletrodomestico() {
+           // this.$inertia.put(route('update',2))
+        }
     }
 }
 </script>

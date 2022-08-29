@@ -35,7 +35,7 @@
                                 <td>{{ item.marca }}</td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <Link :href="`edit/${item.id}`"><button
+                                        <Link :href="$route('edit',`${item.id}`)"><button
                                             class="btn btn-success">
                                             <ion-icon name="create-outline"></ion-icon>
                                         </button></Link>
@@ -59,6 +59,7 @@ import Layout from './Menu.vue'
 import { Head } from '@inertiajs/inertia-vue3'
 import { Link } from '@inertiajs/inertia-vue3'
 import { Inertia } from '@inertiajs/inertia'
+import route from '../../../vendor/tightenco/ziggy/src/js'
 
 export default {
     data() {
