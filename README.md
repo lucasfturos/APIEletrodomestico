@@ -60,3 +60,12 @@ php artisan serve
 ## Screnshot
 
 Caso queira conhecer o projeto, a pasta Screnshot tem fotos das telas e algumas ações
+
+## Projeto em Vue
+
+Na pasta ProjetoEmVue temos a mesma API só que usando o front-end em VueJs 
+ao invés do Blade, caso tenha interesse é só acessar e fazer a instalação 
+seguindo a documentação do README da pasta.
+Mova o conteúdo da pasta ProjetoEmVue para a raiz da API e os arquivos
+presentes na raiz transfira para outra pasta
+O projeto ainda não está funcionando o Editar do CRUD
