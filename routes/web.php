@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EletrodomesticoController;
 
-
 // GETs
 Route::get('/', [EletrodomesticoController::class, 'index'])->name('home');
 Route::get('/create', [EletrodomesticoController::class, 'create'])->name('create');
@@ -13,7 +12,7 @@ Route::get('/edit/{id}', [EletrodomesticoController::class, 'edit'])->name('edit
 Route::post('/', [EletrodomesticoController::class, 'store']);
 
 // Delete
-Route::delete('{id}', [EletrodomesticoController::class, 'destroy'])->name('destroy');
+Route::delete('/{id}', [EletrodomesticoController::class, 'destroy']);
 
 // PUT
-Route::put('/update/{id}', [EletrodomesticoController::class, 'update'])->name('update');
+Route::put('/update/{id}', [EletrodomesticoController::class, 'update']);
